@@ -28,12 +28,14 @@ $$L_\varepsilon\bigl(\hat{y},y\bigr)= -(y\log{\hat{y}} + (1-y)\log{\bigl(1-\hat{
 In the loss function above, if y=1, 
 $$L_\varepsilon\bigl(\hat{y},y\bigr) = -\log{\hat{y}}$$
 
-and if we want $\log{\hat{y}}$ larger, the $\hat{y}$ should be as large as possible.
+and if we want $\log{\hat{y}}$ larger, 
+the $\hat{y}$ should be as large as possible.
 
 If y=0,
 $$L_\varepsilon\bigl(\hat{y},y\bigr) = -\log{\bigl(1-\hat{y}}\bigr)$$
 
-we want $\log{\bigl(1-\hat{y}}\bigr)$ to be large, so the $\hat{y}$ should be as small as possible.
+we want $\log{\bigl(1-\hat{y}}\bigr)$ to be large, 
+so the $\hat{y}$ should be as small as possible.
 
 The final cost function would be:
 
@@ -41,4 +43,6 @@ $$J(w,b) = \frac{1}{m} \sum^{m}_{i=1} L_\varepsilon\bigl(\hat{y}^{i} , y^{i}\big
 
 and after subtitution:
 $$-\frac{1}{m} \sum^{m}_{i=1}[(y\log{\hat{y}} + (1-y)\log{\bigl(1-\hat{y}\bigr)})]$$
-The ultimate goal is to find out the ${W}$ and ${B}$ that give us the minimum cost function ${J}$
+The ultimate goal is to find out the ${W}$ 
+and ${B}$ 
+that give us the minimum cost function ${J}$
