@@ -25,11 +25,18 @@ Instead, it should be describe as the following equation
 
 $$L_\varepsilon\bigl(\hat{y},y\bigr)= -(y\log{\hat{y}} + (1-y)\log{\bigl(1-\hat{y}\bigr)})$$
 
-In the loss function above, if y=1, $L_\varepsilon\bigl(\hat{y},y\bigr) = -\log{\hat{y}}$, and if we want $\log{\hat{y}}$ larger, the $\hat{y}$ should be as large as possible.
+In the loss function above, if y=1, 
+$$L_\varepsilon\bigl(\hat{y},y\bigr) = -\log{\hat{y}}$$
 
-If y=0, $L_\varepsilon\bigl(\hat{y},y\bigr) = -\log{\bigl(1-\hat{y}}\bigr)$, we want $\log{\bigl(1-\hat{y}}\bigr)$ to be large, so the $\hat{y}$ should be as small as possible.
+and if we want $\log{\hat{y}}$ larger, the $\hat{y}$ should be as large as possible.
+
+If y=0,
+$$L_\varepsilon\bigl(\hat{y},y\bigr) = -\log{\bigl(1-\hat{y}}\bigr)$$
+
+we want $\log{\bigl(1-\hat{y}}\bigr)$ to be large, so the $\hat{y}$ should be as small as possible.
 
 The final cost function would be:
+
 $$J(w,b) = \frac{1}{m} \sum^{m}_{i=1} L_\varepsilon\bigl(\hat{y}^{i} , y^{i}\bigr)$$
 
 and after subtitution:
