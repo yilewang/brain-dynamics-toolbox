@@ -40,7 +40,7 @@ so the $\hat{y}$ should be as small as possible.
 The final cost function would be:
 
 
-$$J(w,b)= \frac{1}{m} \sum^{m}\substack{i=1} L_\varepsilon\bigl(\hat{y}^{i} , y^{i}\bigr)$$
+$$J(w,b)= \frac{1}{m} \sum_{i=1}^{m} L_\varepsilon\bigl(\hat{y}^{i} , y^{i}\bigr)$$
 
 and after subtitution:
 
