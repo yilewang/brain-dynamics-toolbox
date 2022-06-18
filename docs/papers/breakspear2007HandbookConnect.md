@@ -15,7 +15,7 @@ left side is **the rate of change of a variable**, but the right side is **the c
 
 The explicit solution of the $\mathbf x(t)$ is
 
-We know that the first derivative of the $\mathbf x(t)$ is velocity ($\mathbf v(t)$), and the second derivative of the $\mathbf x(t)$ is acceleration ($\mathbf a$).
+We know that the first derivative of the $\mathbf x(t)$ is velocity $\mathbf v(t)$, and the second derivative of the $\mathbf x(t)$ is acceleration ($\mathbf a$).
 $${d^2 \mathbf x(t) \over d^2 t} = {\mathbf F \over m}$$
 
 Based on the acceleration, if we want to know the velocity, we can take the first derivative
