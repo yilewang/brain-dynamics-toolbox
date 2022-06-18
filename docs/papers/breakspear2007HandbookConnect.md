@@ -1,4 +1,6 @@
 
+### M. Breakspear, V. Jirsa, 2017, Neuronal Dynamics and Brain Connectivity, Handbook of Brain Connectivity. 
+
 The first mission is to make a dynamical system. To make a dynamical system, we need to know the evolution equations. They describe changes. A set of dynamical variables change in accordance with the underlying properties of the system (they characterize).
 
 An esay example of the dynamical system is the "second law of mechanics" from Newton, which describe the acceleration of an object. 
