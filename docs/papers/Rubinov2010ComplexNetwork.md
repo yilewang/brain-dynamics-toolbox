@@ -71,15 +71,55 @@ How to define the **segregation**?
 
 The mathematical expression of the triangles calculation is that 
 
-$$\mathbf Ti = \frac{1}{2} \sum_{h,j\in N} \mathbf a_{ih} \mathbf a_{ij} \mathbf a_{jh} \tag{1}\label{eq1}$$
+$$\mathbf Ti = \frac{1}{2} \sum_{h,j\in N} \mathbf a_{ih} \mathbf a_{ij} \mathbf a_{jh} \tag{1}$$
 
-The $\eqref{eq1}$ can be used to calculate the `Clustering Coefficient`. 
+The equation (1) can be used to calculate the `Clustering Coefficient`. 
 
-$$
+$$C = \frac{1}{n} \sum_{i\in N} C_i = \frac{1}{n} \sum_{i\in N} \frac{2t_i}{k_i(k_i-1)}\tag{2}$$
 
-Mean clustering coefficient, reflects, on average, the prevalence of clustered connectivity around individual nodes. Influenced by nodes with a low degree.
+In this formula, the $k_i$ is the degree, which we have mentioned above, defined as the number of links connected to a node. The math equation is as below:
+
+$$k_i = \sum_{j\in N} \mathbf a_{ij}\tag{3}$$
+
+
+`Mean clustering coefficient`, reflects, on average, the prevalence of clustered connectivity around individual nodes. Influenced by nodes with a low degree.
 
 `Transitivity`: A classical variant of the clustering coefficient, is normalized collectively and consequently doesn't influence from it.
+
+#### Modularity
+
+More sophisticated measures of segregation, including community structure. The practical method is to subdividing the network into groups of nodes, with a **maximally possible number** of withinin group links, and a **minimally possible number** of between-group links.
+
+Algorithm are used to find the optimal modular structure of a network. The first is optimization algorithm; The second one is to detect the hierarchy of modules (presence of smaller modules inside larger modules).
+
+Single node may belong in different modules simultaneously.
+
+#### Functional integration
+
+The ability to rapidly combine specialized information from distributed brain regions. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
