@@ -1,4 +1,5 @@
-### M. Rubinov, O. Sporns, 2010, Complex network measures of brain connectivity: Uses and interpretations, NeuroImage.
+
+### M. Rubinov, O. Sporns, 2010, Complex network measures of brain connectivity: Uses and interpretations, NeuroImage
 
 Various measures can be used to detect functional **integration**, **segregation** and **centrality** of individual brain regions.
 
@@ -25,6 +26,7 @@ Individual brain should not spatially overlap.
 The properties will be distinctly different when using different parcellation schemes. Functional and structural networks are compared meaningfully as long as they have same parcellation scheme. 
 
 #### Links
+
 links are differentiated on the basis of their **weight** and **directionality**.
 
 Binary links, presence or absence of connections. 
@@ -37,7 +39,7 @@ Weight threshold is important to filter out the spurious connections, which tend
 
 Measurement values of all individual elements comprise a distribution, which is a global property of the network.
 
-![a_network_matrix](../../resources/networkMatrix.png)
+![a_network_matrix](../../asserts/networkMatrix.png)
 
 #### Degree
 
@@ -64,6 +66,22 @@ A straightforward interpretations
 
 How to define the **segregation**?
 1. based on the number of triangles in the network. High number of triangles means segregation.
+
+`Clustering Coefficient`: the fraction of triangles around an individual node, equivalent to the fraction of the node's neighbors that are also neighbors of each other. 
+
+The mathematical expression of the triangles calculation is that 
+
+$$\mathbf Ti = \frac{1}{2} \sum_{h,j\in N} \mathbf a_{ih} \mathbf a_{ij} \mathbf a_{jh} \tag{1}\label{eq1}$$
+
+The \eqref{eq1} can be used to calculate the `Clustering Coefficient`. 
+
+$$
+
+Mean clustering coefficient, reflects, on average, the prevalence of clustered connectivity around individual nodes. Influenced by nodes with a low degree.
+
+`Transitivity`: A classical variant of the clustering coefficient, is normalized collectively and consequently doesn't influence from it.
+
+
 
 ### The python implementation
 
