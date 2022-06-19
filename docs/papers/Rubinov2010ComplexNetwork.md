@@ -51,10 +51,19 @@ The directed variant of the degree, distinguishes `inward links` from `outward l
 
 Basic network properties, number of `nodes`, `links`, and `degree distribution` have huge impacts to network measures.
 
-How to do statistical test in network: Null-hypothesis networks. The Null-hypothesis network has same basic property of the network but simple random or ordered topologies forms.
+How to do statistical test in network: Null-hypothesis networks. The Null-hypothesis network has same basic property of the network but simple random or ordered topologies forms. An example: random topology but same size, density and binary degree distribution.
+
+#### Functional segregation
+
+A simple definition is a specialized processing to occur within a cluster or modules. 
+
+A straightforward interpretations
+- anatomical networks suggest the potential for functional sergregation
+- functional networks suggest an organization of statistical dependencies.
 
 
-
+How to define the **segregation**?
+1. based on the number of triangles in the network. High number of triangles means segregation.
 
 ### The python implementation
 
