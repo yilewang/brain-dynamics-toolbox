@@ -73,7 +73,7 @@ The mathematical expression of the triangles calculation is that
 
 $$\mathbf Ti = \frac{1}{2} \sum_{h,j\in N} \mathbf a_{ih} \mathbf a_{ij} \mathbf a_{jh} \tag{1}\label{eq1}$$
 
-The \eqref{eq1} can be used to calculate the `Clustering Coefficient`. 
+The $\eqref{eq1}$ can be used to calculate the `Clustering Coefficient`. 
 
 $$
 
