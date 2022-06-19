@@ -49,7 +49,9 @@ Degree distribution, the degrees of all nodes in the network, is an important ma
 
 The directed variant of the degree, distinguishes `inward links` from `outward links`. **Weighted variant of degree**, defined as the **sum of all neighboring link weights**.
 
-Basic network properties, number of `nodes`, `links`, and  
+Basic network properties, number of `nodes`, `links`, and `degree distribution` have huge impacts to network measures.
+
+How to do statistical test in network: Null-hypothesis networks. The Null-hypothesis network has same basic property of the network but simple random or ordered topologies forms.
 
 
 
