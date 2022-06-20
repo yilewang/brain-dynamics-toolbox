@@ -96,15 +96,87 @@ Single node may belong in different modules simultaneously.
 
 #### Functional integration
 
-The ability to rapidly combine specialized information from distributed brain regions. 
+The ability to rapidly combine specialized information from distributed brain regions. The basic concepts are based on the path. 
+
+Path in anatomical networks represents potential routes of information flow between pairs of brain regions.
+
+An important property is the **Lengths**. Lengths consequently estimate the potential for functional integration between brain regions. **Shorter paths indicate stronger potential for integration**.
+
+Paths in fMRI data represent sequences of statistical associations and may not correspond to information flow on anatomical connections.
+
+**Not straightforward to intepret unless fMRI data has anatomical data at the same time**
+
+Average shortest paths: **characteristic path length**.
+
+The mathematical expression of the path:
+
+$$d_{ij} = \sum_{\mathbf a_{uv} \in gi\leftrightarrow j} \mathbf a_{uv}, \tag{4}$$
+
+where $gi\leftrightarrow j$ is the shortest path (geodesic) between i and j. $d_ij = \infty$ for all disconnected pairs ${i}$ and ${j}$. The ${u}$ and ${v}$ are two neighboring ndoes.
+
+Another important measures: `Global Efficiency`. **The average inverse shortest path length** is the `Global Efficiency`. 
+
+Thus, the mathematical formula of the `Global Efficiency` is
+
+$$\mathbf E_glob(Graph) = \frac{1}{n(n-1)}\sum_{i\neq j \in V}\frac{1}{d_{ij}}\tag{5}$$
+
+The single efficiency is $\mathbf E(i,j) = \frac{1}{d_{ij}}$
+
+characteristic path length is influenced by long path but `Global Efficiency` is influenced by short path. 
 
 
 
+Two different paths:
+- binary path length, the number of links in the path
+- weighted path, the total sum of individual link lengths
+
+link lengths are inversely related to link weights. Larger weights represent stronger associations and close proximity. 
+
+structural and effective connectivity networks have high global efficiency, functional networks have weaker connections between modules, a lower global effciency.
+
+#### Small-world brain connectivity
+
+A well designed organization could therefore combine the presence of functionally specialized (segregation) amodule with a robust number of intermodular (integration) links. 
+
+An optimal balance of functional integration and segregation. 
+
+Small world network should be simultaneously highly segregated and integrated. 
+
+
+#### Motif
+
+Motif is more about directed network to analyze the pattern of local connectivity.
 
 
 
+#### Centrality
+
+The straightforward neurobiological interpretation: nodes with high degree are interacting structurally or functionally with many other nodes in the network.
+
+`Participation Coefficient` assesses the diversity of intermodular interconnections of individual nodes. Nodes with a high within-module degree but with a low `Participation Coefficient` (known as provincial hubs) are hence likely to play an important role in the facilitation of modular segregation. Nodes with high `Participation Coefficient` (connector hubs) are likely to facilitate global intermodular integration.
+
+$$y_{i} = 1- \sum_{m \in M} (\frac{k_i(m)}{k_i})^2\tag{6}$$
 
 
+`Closeness Centrality`: defined as the inverse of the average shortest path length from one node to all other nodes.
+
+The mathematical expression: 
+
+$$L_{i}^{-1} = \frac{n-1}{\sum_{j \in N, j \neq i }d_{ij}}\tag{7}$$
+
+
+`Betweenness Centrality`: defined as the fraction of all shortest paths in the network that pass through a given node. The bridging node connects disparate parts of the network often have a high `Betweenness Centrality`.
+
+The mathematical expression:
+
+$$b_{i} = \frac{1}{(n-1)(n-2)}\sum_{\mathclap{\substack{h,j \in N \\ h\neq j,\\ h\neq i,\\ j\neq i}}} \frac{\mathbf P_{hj}^{(i)}}{\mathbf P_{hj}}\tag{8}$$
+
+
+Different intepretation in centrality:
+
+- In anatomical network, central node oftern facilitate integration, and enable functional links between anatomical unconnected regions.
+
+**Caveats as path-based measures of integration**
 
 
 
