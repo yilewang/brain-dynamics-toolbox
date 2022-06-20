@@ -11,7 +11,7 @@ Various measures can be used to detect functional **integration**, **segregation
 
 ### The definition of the network
 
-A network is a mathematical representation of a real-world complex system, defined by nodes (vertices) and links (edges) between pairs of nodes.
+A network is a mathematical representation of a real-world complex system, defined by **nodes** (vertices) and **links** (edges) between pairs of nodes.
 
 - Anatomical connections: white matter tracts
 - Functional connections: temporal correlations in activity
@@ -86,6 +86,11 @@ $$k_i = \sum_{j\in N} \mathbf a_{ij}\tag{3}$$
 
 `Transitivity`: A classical variant of the clustering coefficient, is normalized collectively and consequently doesn't influence from it.
 
+The math formula of the `Transitivity`:
+
+$$T = \frac{\sum_{i \in N}2t_i}{\sum_{i\in N}K_i(K_i-1)}\tag{4}$$
+
+
 #### Modularity
 
 More sophisticated measures of segregation, including community structure. The practical method is to subdividing the network into groups of nodes, with a **maximally possible number** of withinin group links, and a **minimally possible number** of between-group links.
@@ -110,7 +115,7 @@ Average shortest paths: **characteristic path length**.
 
 The mathematical expression of the path:
 
-$$d_{ij} = \sum_{\mathbf a_{uv} \in gi\leftrightarrow j} \mathbf a_{uv}, \tag{4}$$
+$$d_{ij} = \sum_{\mathbf a_{uv} \in gi\leftrightarrow j} \mathbf a_{uv}, \tag{5}$$
 
 where $gi\leftrightarrow j$ is the shortest path (geodesic) between i and j. $d_ij = \infty$ for all disconnected pairs ${i}$ and ${j}$. The ${u}$ and ${v}$ are two neighboring ndoes.
 
@@ -118,9 +123,10 @@ Another important measures: `Global Efficiency`. **The average inverse shortest 
 
 Thus, the mathematical formula of the `Global Efficiency` is
 
-$$\mathbf E_glob(Graph) = \frac{1}{n(n-1)}\sum_{i\neq j \in V}\frac{1}{d_{ij}}\tag{5}$$
 
-The single efficiency is $\mathbf E(i,j) = \frac{1}{d_{ij}}$
+$$\mathbf E_{global} = \frac{1}{n}\sum_{i \in N}\frac{\sum_{i\neq j \in V} d_{ij}}{n-1}\tag{6}$$
+
+The single efficiency is $\mathbf E_i = \frac{\sum_{i\neq j \in V} d_{ij}}{n-1}$
 
 characteristic path length is influenced by long path but `Global Efficiency` is influenced by short path. 
 
@@ -155,21 +161,21 @@ The straightforward neurobiological interpretation: nodes with high degree are i
 
 `Participation Coefficient` assesses the diversity of intermodular interconnections of individual nodes. Nodes with a high within-module degree but with a low `Participation Coefficient` (known as provincial hubs) are hence likely to play an important role in the facilitation of modular segregation. Nodes with high `Participation Coefficient` (connector hubs) are likely to facilitate global intermodular integration.
 
-$$y_{i} = 1- \sum_{m \in M} (\frac{k_i(m)}{k_i})^2\tag{6}$$
+$$y_{i} = 1- \sum_{m \in M} (\frac{k_i(m)}{k_i})^2\tag{7}$$
 
 
 `Closeness Centrality`: defined as the inverse of the average shortest path length from one node to all other nodes.
 
 The mathematical expression: 
 
-$$L_{i}^{-1} = \frac{n-1}{\sum_{j \in N, j \neq i }d_{ij}}\tag{7}$$
+$$L_{i}^{-1} = \frac{n-1}{\sum_{j \in N, j \neq i }d_{ij}}\tag{8}$$
 
 
 `Betweenness Centrality`: defined as the fraction of all shortest paths in the network that pass through a given node. The bridging node connects disparate parts of the network often have a high `Betweenness Centrality`.
 
 The mathematical expression:
 
-$$b_{i} = \frac{1}{(n-1)(n-2)}\sum_{\mathclap{\substack{h,j \in N \\ h\neq j,\\ h\neq i,\\ j\neq i}}} \frac{\mathbf P_{hj}^{(i)}}{\mathbf P_{hj}}\tag{8}$$
+$$b_{i} = \frac{1}{(n-1)(n-2)}\sum_{\mathclap{\substack{h,j \in N \\ h\neq j,\\ h\neq i,\\ j\neq i}}} \frac{\mathbf P_{hj}^{(i)}}{\mathbf P_{hj}}\tag{9}$$
 
 
 Different intepretation in centrality:
@@ -180,14 +186,40 @@ Different intepretation in centrality:
 
 
 
+#### Network Resilience
+
+The anatomical features that define the vulnerability to insult the network. One of them is the degree distribution.
+
+complex network with power-law `degree distribution` may be resilient to gradual random deterioration, but highly vulnerbale to disruptiuon of high-degree central nodes.
+
+`Assortativity Coefficient` is a correlation coefficient between the degrees of all nodes on two opposite ends of a link. 
+
+An example below: To calculate the `Assortativity Coefficient` of link between node C and E, we need to calculate the degrees from two sides, C side (K, J, E, I, H) and E side (C, B, G)
+
+```mermaid
+graph TD;
+A((A))-->B((B))
+A((A))-->C((C))
+B((B))-->D((D))
+B((B))-->E((E))
+D((D))-->A((A))
+C((C))-->E((E))
+E((E))-->C((C))
+B((B))-->F((F))
+F((F))-->A((A))
+D((D))-->F((F))
+A((A))-->G((G))
+G((G))-->E((E))
+H((H))-->C((C))
+I((I))-->C((C))
+J((J))-->C((C))
+K((K))-->C((C))
+```
 
 
+`average neighbor degree`
 
-
-
-
-
-
+`local assortativity coefficient`
 
 
 
@@ -197,10 +229,7 @@ Different intepretation in centrality:
 
 ### The python implementation
 
-```python
-import bctpy
-import networkx as nx
-```
+See [notebook](../../demos/Rubinov2010Demo.ipynb)
 
 
 
