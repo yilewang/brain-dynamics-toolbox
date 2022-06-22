@@ -163,6 +163,7 @@ The straightforward neurobiological interpretation: nodes with high degree are i
 
 $$y_{i} = 1- \sum_{m \in M} (\frac{k_i(m)}{k_i})^2\tag{7}$$
 
+where ${M}$ is the set of modules (see modularity), and ${ki (m)}$ is the number of links between ${i}$ and all nodes in module ${m}$.
 
 `Closeness Centrality`: defined as the inverse of the average shortest path length from one node to all other nodes.
 
