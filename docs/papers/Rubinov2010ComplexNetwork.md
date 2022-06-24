@@ -115,9 +115,12 @@ Average shortest paths: **characteristic path length**.
 
 The mathematical expression of the path:
 
-$$d_{ij} = \sum_{\mathbf a_{uv} \in gi\leftrightarrow j} \mathbf a_{uv}, \tag{5}$$
+$$d_{ij} = \sum_{\mathbf a_{uv} \in g_i\leftrightarrow j} \mathbf a_{uv}, \tag{5}$$
 
-where $gi\leftrightarrow j$ is the shortest path (geodesic) between i and j. $d_ij = \infty$ for all disconnected pairs ${i}$ and ${j}$. The ${u}$ and ${v}$ are two neighboring ndoes.
+where $g_i\leftrightarrow j$ is the shortest path (geodesic) between i and j. $d_ij = \infty$ for all disconnected pairs ${i}$
+ and ${j}$. 
+ The ${u}$ and
+  ${v}$ are two neighboring ndoes.
 
 Another important measures: `Global Efficiency`. **The average inverse shortest path length** is the `Global Efficiency`. 
 
