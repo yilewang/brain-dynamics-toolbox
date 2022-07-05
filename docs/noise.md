@@ -12,4 +12,9 @@ when noise is present, a fluctuation can perturb the population from its equilib
 
 The time delay should be considered
 
-An example to understand why delay matters: two systems shall oscillate in a synchronous fashion at 10 Hz. Their coupling shall be such that it reinforces synchronous in-phase oscillation when no signal transmission delay exits. If the delay increases to 50 ms, then the previously stable synchronous oscillation may become unstable, because the transmitted signal from one oscillator arrives now during the antiphase of the other oscillator. 
+An example to understand why delay matters: two systems shall oscillate in a synchronous fashion at 10 Hz. Their coupling shall be such that it reinforces synchronous in-phase oscillation when no signal transmission delay exits. If the delay increases to 50 ms, then the previously stable synchronous oscillation may become unstable, because the transmitted signal from one oscillator arrives now during the antiphase of the other oscillator.
+
+
+the effect of noise driving the network transiently out of its equilibrium state.
+
+ 
