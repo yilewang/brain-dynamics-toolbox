@@ -106,4 +106,15 @@ $$T(t) = T_{ext} - A/B[1-exp(-Bt)]$$
 #### Linear Algebra
 
 $\underline{r}$ represents a list of the firing rates.
-$\underline{\underline{r}}$
+$\underline{\underline{r}}$ represents the matrix
+
+
+#### Bayes' Theorem
+
+There are two ways to express the Bayes' theorem, one is $P(A\cap B) = P(A) P(B|A)$ and 
+the other is $P(A\cap B) = P(B) P(A|B)$. If we rearrange the equation, we can have:
+
+$$P(B | A) = \frac{P(B)P(A|B)}{P(A)} $$
+
+
+
