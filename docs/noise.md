@@ -4,7 +4,7 @@ First, single-neuron firing rates are typically much lower than LFPs. Two Proper
 
 However, frequency of the population oscillation increase rapidly when **synaptic delay** decrease. It can be much larger than firing frequency of the neurons.
 
-cluster state: noise and heterogeneities are weak. Spikes together in a narrow window of time. In such a state, the oscillation frequency is close to the average of the neurons. 
+**cluster state**: noise and heterogeneities are weak. Spikes together in a narrow window of time. In such a state, the oscillation frequency is close to the average of the neurons. 
 
 A rationale: populations of neurons are dynamic systems capable of displaying oscillatory behavior. 
 
@@ -18,3 +18,10 @@ An example to understand why delay matters: two systems shall oscillate in a syn
 the effect of noise driving the network transiently out of its equilibrium state.
 
  
+### G, delay and noise
+
+Three intrinsic properties of brain:
+
+- G: The coupling strength between regions
+- delay: the synchronization depends on the short delay
+- noise: driving effect to push the network transiently out of its equilibrium state.
