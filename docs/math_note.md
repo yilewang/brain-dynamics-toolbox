@@ -40,3 +40,16 @@ Logarithm is the inverse function of expoential. The basic property, $ \ln x = y
 #### Limit
 
 
+#### First Order Derivative
+
+
+#### Taylor Series
+
+Taylor series is a polynomial approximation method.
+
+$f(x) = \sum_{k=0}^{\infty} C_k X^k$
+
+
+#### Jacobian Matrix
+
+
