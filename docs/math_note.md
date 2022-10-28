@@ -53,3 +53,17 @@ $f(x) = \sum_{k=0}^{\infty} C_k X^k$
 #### Jacobian Matrix
 
 
+#### strict local minimizer
+
+be local minimizer: 
+
+be strict local minimizer
+It has to be twice differentiable; and $ x^* \in \mathbb{R^d} $ is a critical point of V.
+
+critical point definition is: 
+
+
+### Linear Algebra
+
+### Probability
+
