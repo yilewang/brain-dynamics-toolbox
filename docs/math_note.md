@@ -35,7 +35,12 @@ $ X \in \mathbb{R} $; Also it could be used to indicate the size of the matrix: 
 
 #### Logarithm and Exponential
 
-Logarithm is the inverse function of expoential. The basic property, $ \ln x = y $ and $ e^y = x $. One example: a: $a^{{log_{a}x}} =x $, $e^{\ln x} = x$. Another example: $log_a x = \frac{\ln x}  {\ln a}$. 
+Logarithm is the inverse function of expoential. The basic property, $ \ln x = y $ 
+and 
+$ e^y = x $. 
+One example: a: $a^{{log_{a}x}} =x $, 
+$e^{\ln x} = x$. 
+Another example: $log_a x = \frac{\ln x}  {\ln a}$. 
 
 #### Limit
 
@@ -58,7 +63,9 @@ $f(x) = \sum_{k=0}^{\infty} C_k X^k$
 be local minimizer: 
 
 be strict local minimizer
-It has to be twice differentiable; and $ x^* \in \mathbb{R^d} $ is a critical point of V.
+It has to be twice differentiable; and
+$ x^* \in \mathbb{R^d} $ 
+is a critical point of V.
 
 critical point definition is: 
 
